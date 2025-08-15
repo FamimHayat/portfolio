@@ -3,7 +3,7 @@ import Header from "../(common)/Header";
 
 const AboutMe = () => {
   return (
-    <section>
+    <section id="about">
       <Header headingText={"about me"} />
       <div className="h-[calc(100dvh-150px)] parallax"></div>
     </section>

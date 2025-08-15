@@ -87,3 +87,10 @@ body {
   background-repeat: no-repeat;
   background-size: cover;
 }
+
+#about {
+  scroll-margin-top: 100px; /* adjust to navbar height */
+}
+html {
+  scroll-behavior: smooth;
+}
