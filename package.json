@@ -10,6 +10,7 @@
   },
   "dependencies": {
     "@splidejs/react-splide": "^0.7.12",
+    "aos": "^2.3.4",
     "autoprefixer": "^10.4.21",
     "framer-motion": "^12.23.12",
     "next": "15.4.6",

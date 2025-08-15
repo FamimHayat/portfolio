@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { LettersPullUp } from "./(banner-components)/LettersPullUp";
 
 const Banner = () => {
-  const texts = ["portfolio", "front-end", "web-dev", "UI/UX"];
+  const texts = ["portfolio", "front-end", "web-dev", "ui/ux"];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [key, setKey] = useState(0); // force re-render LettersPullUp
 
@@ -17,12 +17,14 @@ const Banner = () => {
   }, []);
 
   return (
-    <section className="px-2  h-[calc(100dvh-80px)] flex items-center justify-center">
-      <LettersPullUp
-        key={key} // forces re-mount to replay animation
-        text={texts[currentIndex]}
-        className=" text-[calc(16px+15vw)] sm:text-[calc(35px+20vw)] md:text-[calc(40px+20vw)] lg:text-[calc(50px+20vw)] text-center text-orange-400"
-      />
+    <section className="px-2  h-[calc(100dvh-160px)] leading-[calc(100dvh-160px)]">
+      <div className="h-fit flex items-center justify-center">
+        <LettersPullUp
+          key={key} // forces re-mount to replay animation
+          text={texts[currentIndex]}
+          className=" text-[calc(16px+15vw)] sm:text-[calc(35px+20vw)] md:text-[calc(40px+20vw)] lg:text-[calc(50px+20vw)] text-center text-brand font-headerFont font-semibold tracking-tighter"
+        />
+      </div>
     </section>
   );
 };

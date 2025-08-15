@@ -9,19 +9,19 @@ const Nav = () => {
 
   return (
     <>
-      <nav className="mx-auto px-3 py-4 sm:px-6">
-        <div className="flex items-center justify-between">
+      <nav className="mx-auto px-3  sm:px-6 ">
+        <div className="flex items-center justify-between border-b pt-4 pb-6 border-lightBrand/40">
           <div>
-            <h2 className="text-[25px] font-bold text-white bg-[#000000bf] font-headerFont">
+            <h2 className=" text-[20px] md:text-[22px] lg:text-[26px] font-bold text-white rounded-full border-2 px-2 py-1 border-brand font-headerFont text-shadow-light">
               famim hayat
             </h2>
           </div>
           <div className="hidden md:block">
-            <ul className="flex items-center md:gap-4 lg:gap-6 xl:gap-10 ">
+            <ul className="flex items-center md:gap-3 lg:gap-5 xl:gap-8 ">
               <li className=" cursor pointer">
                 <Link
                   href="/"
-                  className="nav-li-css h-full text-[20px] px-4 bg-[#00000040]  hover:bg-[#00000080] text-[#ffffff]  font-headerFont md:text-[23px] lg:text-[30px] transition-all  "
+                  className="nav-li-css  text-[20px] px-3  h-fit bg-[#00000040] rounded-4xl border-2 border-brand duration-150  text-shadow-light hover:bg-[#f97316]  text-white font-headerFont md:text-[22px] lg:text-[26px] button-shadow-hover"
                 >
                   home
                 </Link>
@@ -29,7 +29,7 @@ const Nav = () => {
               <li>
                 <Link
                   href="/about"
-                  className=" nav-li-css h-full text-[20px] px-4 bg-[#00000040] hover:bg-[#00000080] text-white font-headerFont md:text-[23px] lg:text-[30px] transition-all  "
+                  className=" nav-li-css  text-[20px] px-3 h-fit  bg-[#00000040] rounded-4xl border-2 border-brand duration-150 text-shadow-light hover:bg-[#f97316] text-white font-headerFont md:text-[22px] lg:text-[26px]  button-shadow-hover"
                 >
                   about
                 </Link>
@@ -37,7 +37,7 @@ const Nav = () => {
               <li>
                 <Link
                   href="/services"
-                  className=" nav-li-css h-full text-[20px] px-4 bg-[#00000040] hover:bg-[#00000080] text-white font-headerFont md:text-[23px] lg:text-[30px] transition-all  "
+                  className=" nav-li-css  text-[20px] px-3 h-fit  bg-[#00000040] rounded-4xl border-2 border-brand duration-150 text-shadow-light hover:bg-[#f97316] text-white font-headerFont md:text-[22px] lg:text-[26px] button-shadow-hover"
                 >
                   services
                 </Link>
@@ -45,7 +45,7 @@ const Nav = () => {
               <li>
                 <Link
                   href="/demo"
-                  className=" nav-li-css h-full text-[20px] px-4 bg-[#00000040] hover:bg-[#00000080] text-white font-headerFont md:text-[23px] lg:text-[30px] transition-all "
+                  className=" nav-li-css  text-[20px] px-3 h-fit  bg-[#00000040] rounded-4xl border-2 border-brand duration-150 text-shadow-light hover:bg-[#f97316] text-white font-headerFont md:text-[22px] lg:text-[26px] button-shadow-hover"
                 >
                   demo
                 </Link>
@@ -53,7 +53,7 @@ const Nav = () => {
               <li>
                 <Link
                   href="/contact"
-                  className=" text-[20px] h-full px-2 text-white font-headerFont  bg-[#00000040]  transition-all  hover:bg-textColor   hover:text-primaryColor md:text-[23px] lg:text-[30px] "
+                  className=" nav-li-css  text-[20px] px-3 h-fit   rounded-4xl border-2 border-brand duration-150 bg-[#f97316] text-white font-headerFont md:text-[22px] lg:text-[26px] text-shadow-light button-shadow-hover"
                 >
                   contact
                 </Link>
@@ -75,7 +75,7 @@ const Nav = () => {
             <li>
               <Link
                 href="/"
-                className=" block px-4 py-2 text-[30px] w-full bg-[#000000b7] text-white font-headerFont   rounded nav-custom-shadow active:bg-black focus:text-brandColor"
+                className=" block px-4 py-2 text-[30px] w-full duration-150 bg-lightBrand hover:bg-brand text-white font-headerFont   rounded nav-custom-shadow text-shadow-light active:bg-black focus:text-brandColor"
               >
                 home
               </Link>
@@ -83,7 +83,7 @@ const Nav = () => {
             <li>
               <Link
                 href="/about"
-                className="block px-4 py-2 text-[30px] w-full text-white font-headerFont bg-[#000000b7] rounded nav-custom-shadow active:bg-black focus:text-brandColor"
+                className="block px-4 py-2 text-[30px] w-full text-white font-headerFont duration-150 bg-lightBrand hover:bg-brand rounded nav-custom-shadow text-shadow-light active:bg-black focus:text-brandColor"
               >
                 about
               </Link>
@@ -91,7 +91,7 @@ const Nav = () => {
             <li>
               <Link
                 href="/services"
-                className="block px-4 py-2 text-[30px] w-full text-white font-headerFont bg-[#000000b7] rounded nav-custom-shadow active:bg-black focus:text-brandColor"
+                className="block px-4 py-2 text-[30px] w-full text-white font-headerFont duration-150 bg-lightBrand hover:bg-brand rounded nav-custom-shadow text-shadow-light active:bg-black focus:text-brandColor"
               >
                 services
               </Link>
@@ -99,7 +99,7 @@ const Nav = () => {
             <li>
               <Link
                 href="/demo"
-                className="block px-4 py-2 text-[30px] w-full text-white font-headerFont bg-[#000000b7] rounded nav-custom-shadow active:bg-black focus:text-brandColor"
+                className="block px-4 py-2 text-[30px] w-full text-white font-headerFont duration-150 bg-lightBrand hover:bg-brand rounded nav-custom-shadow text-shadow-light active:bg-black focus:text-brandColor "
               >
                 demo
               </Link>
@@ -107,9 +107,11 @@ const Nav = () => {
             <li>
               <Link
                 href="/contact"
-                className="bg-black block w-full px-4 py-2 text-[30px] font-headerFont text-white  rounded  active:bg-primaryColor transition-all hover:text-white "
+                className=" block w-full px-2 py-2 border-2 border-lightBrand text-[30px] font-headerFont text-white  rounded   active:bg-primaryColor "
               >
-                contact
+                <div className="bg-lightBrand text-shadow-light px-2">
+                  contact
+                </div>
               </Link>
             </li>
           </ul>

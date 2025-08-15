@@ -4,11 +4,86 @@
   margin: 0 auto;
 }
 
-:root {
-  --background: #121212;
-  --foreground: #171717;
+@theme {
+  --color-brand: #f97316;
+  --color-lightBrand: #fb923c;
+  --color-text: #171717;
+
+  --font-headerFont: "Baloo 2", sans-serif;
+  --font-textFont: "Comfortaa", sans-serif;
 }
 
 body {
   background-color: #121212;
+}
+
+.nav-custom-shadow {
+  box-shadow: rgb(0, 0, 0) 0px 2px 4px, rgba(0, 0, 0, 0.666) 0px 7px 13px -3px,
+    rgba(0, 0, 0, 0.2) 0px -3px 0px inset;
+}
+
+.button-shadow {
+  box-shadow: rgba(251, 146, 60, 0.4) 0px 5px, rgba(251, 146, 60, 0.3) 0px 10px,
+    rgba(251, 146, 60, 0.2) 0px 15px, rgba(251, 146, 60, 0.1) 0px 20px,
+    rgba(251, 146, 60, 0.05) 0px 25px;
+}
+
+.button-shadow-hover:hover {
+  box-shadow: rgba(251, 146, 60, 0.4) 0px 5px, rgba(251, 146, 60, 0.3) 0px 10px,
+    rgba(251, 146, 60, 0.2) 0px 15px, rgba(251, 146, 60, 0.1) 0px 20px,
+    rgba(251, 146, 60, 0.05) 0px 25px;
+}
+
+::-webkit-scrollbar {
+  width: 4px;
+  height: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: #121212;
+}
+
+::-webkit-scrollbar-thumb {
+  visibility: hidden;
+  background: #f97316;
+  border-radius: 4px;
+  transition: all linear 0.8s;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  visibility: visible;
+  background: #fb923c;
+}
+
+::selection {
+  background: #f97316;
+  color: white;
+}
+
+::-moz-selection {
+  background: #f97316;
+  color: white;
+}
+
+@layer utilities {
+  .text-shadow-deep {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
+      /* small dark edge */ 2px 2px 4px rgba(0, 0, 0, 0.7),
+      /* medium spread */ 4px 4px 8px rgba(0, 0, 0, 0.6),
+      /* bigger spread */ 6px 6px 12px rgba(0, 0, 0, 0.5); /* deepest layer */
+  }
+  .text-shadow-light {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
+      /* small dark edge */ 2px 2px 4px rgba(0, 0, 0, 0.7),
+      /* medium spread */ 4px 4px 8px rgba(0, 0, 0, 0.6);
+  }
+}
+
+.parallax {
+  background-image: url("/parallax.jpg"); /* change to your image path */
+
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
 }
