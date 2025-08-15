@@ -1,6 +1,14 @@
 @import "tailwindcss";
 
+@utility container {
+  margin: 0 auto;
+}
+
 :root {
-  --background: #ffffff;
+  --background: #121212;
   --foreground: #171717;
+}
+
+body {
+  background-color: #121212;
 }
