@@ -20,7 +20,7 @@ const Nav = () => {
   return (
     <>
       <nav className="mx-auto px-3 sm:px-6">
-        <div className="flex items-center justify-between border-b pt-4 pb-6 border-lightBrand/40">
+        <div className="flex items-center justify-between border-b pt-4 pb-6 border-lightBrand/40 navbar-custom-shadow shadow-brand">
           <div>
             <h2 className="text-[20px] md:text-[22px] lg:text-[26px] font-bold text-white rounded-full border-2 px-2 py-1 border-brand font-headerFont text-shadow-light">
               famim hayat

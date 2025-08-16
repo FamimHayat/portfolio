@@ -3,6 +3,9 @@ import "./globals.css";
 import Nav from "./components/(common)/Nav";
 import Footer from "./components/(common)/Footer";
 import Breadcrumb from "./components/(common)/Breadcrumb";
+import GridBack from "./components/(common)/GridBack";
+import BackToTop from "./components/(common)/BackToTop";
+import CustomCursor from "./components/(common)/CustomCursor";
 
 const geistSans = Geist({
   variable: "--font-geist-sans",
@@ -21,7 +24,6 @@ export const metadata = {
     icon: "/portfolio-icon.png",
   },
 };
-
 export default function RootLayout({ children }) {
   return (
     <html lang="en">
@@ -34,10 +36,15 @@ export default function RootLayout({ children }) {
       <body
         className={`${geistSans.variable} ${geistMono.variable} antialiased`}
       >
+        <CustomCursor />
         <Nav />
-        <Breadcrumb />
-        {children}
-        <Footer />
+        <GridBack>
+          <Breadcrumb />
+
+          {children}
+          <BackToTop />
+          <Footer />
+        </GridBack>
       </body>
     </html>
   );
