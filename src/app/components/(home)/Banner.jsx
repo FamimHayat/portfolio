@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 import { LettersPullUp } from "./(banner-components)/LettersPullUp";
 
 const Banner = () => {
-  const texts = ["portfolio", "front-end", "web-dev", "ui/ux"];
+  const texts = ["hi", "portfolio", "front-end", "web-dev", "ui/ux"];
   const [currentIndex, setCurrentIndex] = useState(0);
   const [key, setKey] = useState(0); // force re-render LettersPullUp
 
