@@ -72,16 +72,21 @@ body {
       /* medium spread */ 4px 4px 8px rgba(0, 0, 0, 0.6),
       /* bigger spread */ 6px 6px 12px rgba(0, 0, 0, 0.5); /* deepest layer */
   }
+
   .text-shadow-light {
     text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.8),
       /* small dark edge */ 2px 2px 4px rgba(0, 0, 0, 0.7),
       /* medium spread */ 4px 4px 8px rgba(0, 0, 0, 0.6);
   }
+  .text-shadow-extraLight {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.654),
+      /* small dark edge */ 2px 2px 4px rgba(0, 0, 0, 0.579),
+      /* medium spread */ 4px 4px 8px rgba(0, 0, 0, 0.401);
+  }
 }
 
 .parallax {
   background-image: url("/parallax.jpg"); /* change to your image path */
-
   background-attachment: fixed;
   background-position: center;
   background-repeat: no-repeat;
@@ -93,4 +98,9 @@ body {
 }
 html {
   scroll-behavior: smooth;
+}
+
+.certificate {
+  background-image: url("/certificate.jpg");
+  position: absolute;
 }
