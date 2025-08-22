@@ -55,6 +55,12 @@ body {
   background: #fb923c;
 }
 
+.text-animation {
+  -webkit-text-stroke: 2px #f97316;
+  color: #121212;
+}
+
+/* 
 ::selection {
   background: #f97316;
   color: white;
@@ -63,7 +69,7 @@ body {
 ::-moz-selection {
   background: #f97316;
   color: white;
-}
+} */
 
 @layer utilities {
   .text-shadow-deep {

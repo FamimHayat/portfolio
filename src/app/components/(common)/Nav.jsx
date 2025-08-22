@@ -5,7 +5,7 @@ import { BsThreeDots } from "react-icons/bs";
 const Nav = () => {
   const [menuOpen, setMenuOpen] = useState(false);
 
-  const scrollToAboutEnd = ({ offset = -50 }) => {
+  const scrollToAboutEnd = ({ offset = 100 }) => {
     const section = document.getElementById("about");
     if (section) {
       const targetPosition =
@@ -98,7 +98,7 @@ const Nav = () => {
             <li>
               <button
                 onClick={() => {
-                  scrollToAboutEnd({ offset: -400 });
+                  scrollToAboutEnd({ offset: 100 });
                   setMenuOpen(false);
                 }}
                 className="block text-left px-4 py-2 text-[30px] w-full text-white font-headerFont duration-150 bg-lightBrand hover:bg-brand rounded nav-custom-shadow text-shadow-light"

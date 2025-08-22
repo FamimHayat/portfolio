@@ -1,0 +1,35 @@
+/* <!DOCTYPE html>
+<html>
+<head>
+  <title>Simple To-Do List</title>
+</head>
+<body>
+
+  <h2>To-Do List</h2>
+
+  <input type="text" id="todoInput" placeholder="Enter a task">
+  <button onclick="addTodo()">Add</button>
+
+  <ul id="todoList"></ul>
+
+  <script>
+    function addTodo() {
+      const input = document.getElementById("todoInput");
+      const taskText = input.value.trim();
+      if (taskText === "") return;
+      const li = document.createElement("li");
+      li.textContent = taskText;
+      const deleteBtn = document.createElement("button");
+      deleteBtn.textContent = "Delete";
+      deleteBtn.style.marginLeft = "10px";
+      deleteBtn.onclick = function () {
+        li.remove();
+      };
+      li.appendChild(deleteBtn);
+      document.getElementById("todoList").appendChild(li);
+      input.value = "";
+    }
+  </script>
+
+</body>
+</html> */

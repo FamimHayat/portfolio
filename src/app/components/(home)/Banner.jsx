@@ -17,7 +17,7 @@ const Banner = () => {
   }, []);
 
   return (
-    <section className="px-2  h-[calc(100dvh-160px)] leading-[calc(100dvh-160px)]">
+    <section className="relative px-2  h-[calc(100dvh-160px)] leading-[calc(100dvh-160px)]">
       <div className="h-fit flex items-center justify-center">
         <LettersPullUp
           key={key} // forces re-mount to replay animation
