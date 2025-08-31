@@ -9,8 +9,9 @@
   --color-lightBrand: #fb923c;
   --color-text: #171717;
 
-  --font-headerFont: "Baloo 2", sans-serif;
-  --font-textFont: "Comfortaa", sans-serif;
+  --font-headerFont: "Righteous", sans-serif;
+
+  --font-textFont: "Lato", sans-serif;
 }
 
 body {

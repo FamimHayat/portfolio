@@ -22,7 +22,7 @@ const Banner = () => {
         <LettersPullUp
           key={key} // forces re-mount to replay animation
           text={texts[currentIndex]}
-          className=" text-[calc(16px+15vw)] sm:text-[calc(35px+20vw)] md:text-[calc(40px+20vw)] lg:text-[calc(50px+20vw)] text-center text-brand font-headerFont font-semibold tracking-tighter"
+          className=" text-[calc(12px+15vw)] sm:text-[calc(30px+20vw)] md:text-[calc(35px+20vw)] lg:text-[calc(40px+20vw)] text-center text-brand font-headerFont font-semibold tracking-tighter"
         />
       </div>
     </section>

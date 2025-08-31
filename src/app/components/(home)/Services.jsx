@@ -9,12 +9,12 @@ const Services = () => {
         <div className="grid grid-cols-1 gap-3 md:gap-5 ">
           <div className="py-3 px-4 bg-brand w-full  rounded-xl nav-custom-shadow">
             <p className=" text-3xl md:text-[calc(10px+3vw)] lg:text-[calc(10px+2vw)] text-white text-shadow-light font-textFont">
-              api integration
+              Front-end websites
             </p>
           </div>
           <div className="py-3 px-4 bg-brand w-full md:w-full rounded-xl nav-custom-shadow">
             <p className=" text-3xl md:text-[calc(10px+3vw)] lg:text-[calc(10px+2vw)] text-white text-shadow-light font-textFont">
-              Performance Optimization
+              Respnsive Design
             </p>
           </div>
           <div className="py-3 px-4 bg-brand w-full md:w-full rounded-xl nav-custom-shadow">
@@ -22,31 +22,23 @@ const Services = () => {
               UI/UX Implementation
             </p>
           </div>
-          <div className="py-3 px-4 bg-brand w-full md:w-full rounded-xl nav-custom-shadow">
-            <p className=" text-3xl md:text-[calc(10px+3vw)] lg:text-[calc(10px+2vw)] text-white text-shadow-light font-textFont">
-              api integration
-            </p>
-          </div>
+
         </div>
         <div className="grid grid-cols-1 gap-3 md:gap-5 ">
           <div className="py-3 px-4 bg-brand w-full md:w-full rounded-xl nav-custom-shadow">
             <p className=" text-3xl md:text-[calc(10px+3vw)] lg:text-[calc(10px+2vw)] text-white text-shadow-light font-textFont">
-              api integration
+              futuristic Design
             </p>
           </div>
-          <div className="py-3 px-4 bg-brand w-full md:w-full rounded-xl nav-custom-shadow">
-            <p className=" text-3xl md:text-[calc(10px+3vw)] lg:text-[calc(10px+2vw)] text-white text-shadow-light font-textFont">
-              Performance Optimization
-            </p>
-          </div>
-          <div className="py-3 px-4 bg-brand w-full md:w-full rounded-xl nav-custom-shadow">
-            <p className=" text-3xl md:text-[calc(10px+3vw)] lg:text-[calc(10px+2vw)] text-white text-shadow-light font-textFont">
-              UI/UX Implementation
-            </p>
-          </div>
+
           <div className="py-3 px-4 bg-brand w-full md:w-full rounded-xl nav-custom-shadow">
             <p className=" text-3xl md:text-[calc(10px+3vw)] lg:text-[calc(10px+2vw)] text-white text-shadow-light font-textFont">
               api integration
+            </p>
+          </div>
+          <div className="py-3 px-4 bg-brand w-full md:w-full rounded-xl nav-custom-shadow">
+            <p className=" text-3xl md:text-[calc(10px+3vw)] lg:text-[calc(10px+2vw)] text-white text-shadow-light font-textFont">
+              dashboards
             </p>
           </div>
         </div>
