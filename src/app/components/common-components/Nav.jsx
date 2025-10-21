@@ -15,7 +15,7 @@ const Nav = () => {
 
   return (
     <nav
-      className={`px-2 sm:px-3 lg:px-5 py-2 border-b border-b-white/30 fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out ${
+      className={`px-2 sm:px-3 lg:px-5 py-2 border-b border-b-white/30 fixed top-0 left-0 w-full z-50 transition-all duration-500 ease-in-out  ${
         scrolled ? "bg-black/80 backdrop-blur-md" : "bg-transparent"
       }`}
     >
@@ -24,7 +24,7 @@ const Nav = () => {
         <Link href="/">
           <h2
             data-aos="fade-right"
-            className="sm:px-1 lg:px-3 py-1.5 text-lg sm:text-2xl text-white tracking-tighter font-semibold font-righteous [text-shadow:0_0_10px_rgba(245,239,230,0.6),0_0_20px_rgba(245,239,230,0.5),0_0_40px_rgba(245,239,230,0.4)]"
+            className="sm:px-1 lg:px-3 py-1.5 text-lg sm:text-2xl text-white tracking-tighter font-semibold font-righteous  [text-shadow:0_0_10px_rgba(245,239,230,0.6),0_0_20px_rgba(245,239,230,0.5),0_0_40px_rgba(245,239,230,0.4)]"
           >
             famim hayat
           </h2>
@@ -36,7 +36,7 @@ const Nav = () => {
           <li data-aos="fade-up">
             <Link
               href="/"
-              className="text-white text-md sm:text-lg lg:text-xl font-righteous hover:text-yellow-300 transition-colors duration-200"
+              className="text-white text-md sm:text-lg lg:text-xl font-righteous brandButtonEffect"
             >
               home
             </Link>
@@ -44,10 +44,10 @@ const Nav = () => {
 
           {/* Sites Dropdown */}
           <li data-aos="fade-right" className="relative group">
-            <button className="text-white text-md sm:text-lg lg:text-xl font-righteous hover:text-yellow-300 transition-colors duration-200">
+            <button className="text-white text-md sm:text-lg lg:text-xl font-righteous brandButtonEffect ">
               sites
             </button>
-            <div className="absolute top-full -left-4 w-40 bg-black/90 backdrop-blur-md p-4 mt-2 rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999]">
+            <div className="absolute top-full -left-4 w-fit bg-black/90 backdrop-blur-md p-4 mt-2 rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999]">
               <ul className="flex flex-col gap-2 font-righteous">
                 <li>
                   <Link
@@ -95,7 +95,7 @@ const Nav = () => {
 
           {/* Pages Dropdown */}
           <li data-aos="fade-left" className="relative group">
-            <button className="text-white text-md sm:text-lg lg:text-xl font-righteous hover:text-yellow-300 transition-colors duration-200">
+            <button className="text-white text-md sm:text-lg lg:text-xl font-righteous brandButtonEffect">
               pages
             </button>
             <div className="absolute top-full -left-4 w-40 bg-black/90 backdrop-blur-md p-4 mt-2 rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999]">

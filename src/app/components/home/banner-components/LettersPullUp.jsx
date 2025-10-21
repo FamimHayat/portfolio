@@ -30,7 +30,7 @@ export function LettersPullUp({ text, className = "" }) {
   return (
     <motion.div
       key={text}
-      className="flex justify-center"
+      className="hidden md:flex justify-center"
       variants={container}
       initial="hidden"
       animate="show"

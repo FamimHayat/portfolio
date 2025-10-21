@@ -1,6 +1,7 @@
 import "./globals.css";
 import Nav from "./components/common-components/Nav";
 import { Righteous } from "next/font/google";
+import AOSWrapper from "./components/common-components/AOSWrapper";
 
 const righteous = Righteous({
   variable: "--font-righteous",
@@ -17,8 +18,10 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en">
       <body className={`${righteous.variable} antialiased`}>
-        <Nav />
-        {children}
+        <AOSWrapper>
+          <Nav />
+          {children}
+        </AOSWrapper>
       </body>
     </html>
   );
