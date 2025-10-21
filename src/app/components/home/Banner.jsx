@@ -18,19 +18,18 @@ const Banner = () => {
   const [desktopIndex, setDesktopIndex] = useState(0);
 
   useEffect(() => {
-    const text = desktopTexts[desktopIndex];
     const timer = setTimeout(() => {
       setDesktopIndex((prev) => (prev + 1) % desktopTexts.length);
-    }, text.length * 80 + 1300);
+    }, desktopTexts[desktopIndex].length * 80 + 1300);
     return () => clearTimeout(timer);
   }, [desktopIndex]);
 
   return (
     <section className="relative px-2 h-dvh overflow-hidden z-10">
-      <div className="z-50 container flex items-center justify-between px-2 pt-25 font-righteous relative overflow-hidden">
+      <div className="container flex items-center justify-between px-2 pt-25 font-righteous relative">
         <Link
           href="/resume"
-          className="px-5 py-2 border-2 border-brand rounded-4xl text-xl text-white cursor-pointer text-glow"
+          className="px-5 py-2 border-2 border-brand rounded-4xl text-xl text-white cursor-pointer"
         >
           resume
         </Link>
@@ -41,16 +40,16 @@ const Banner = () => {
         crafting clean interfaces
       </p>
 
-      <div className="relative h-full flex flex-col items-center justify-center text-center border-t-2 sm:border-t-2 border-brand/50 rounded-full">
-        <h1 className="hidden sm:block text-[clamp(2rem,25vw,27rem)] text-brand font-spacema font-bold uppercase [text-shadow:0_0_10px_rgba(245,239,230,0.6),0_0_20px_rgba(245,239,230,0.5),0_0_40px_rgba(245,239,230,0.4)]">
+      <div className="relative h-full flex flex-col items-center justify-center text-center border-t-2 border-brand/50 rounded-full">
+        <h1 className="hidden sm:block text-[clamp(2rem,25vw,27rem)] text-brand font-spacema font-bold uppercase">
           <LettersPullUp text={desktopTexts[desktopIndex]} />
         </h1>
 
-        <h1 className="sm:hidden text-[clamp(2rem,25vw,10rem)] text-brand font-spacema font-bold uppercase text-glow z-10">
+        <h1 className="sm:hidden text-[clamp(2rem,25vw,10rem)] text-brand font-spacema font-bold uppercase   text-glow">
           portfolio
         </h1>
 
-        <div className="text-center pb-2 relative z-10 mt-20">
+        <div className="text-center pb-2 mt-20">
           <p className="text-xl text-white/70">crafting clean interfaces</p>
         </div>
 

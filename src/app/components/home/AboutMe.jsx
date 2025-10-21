@@ -9,7 +9,7 @@ const AboutMe = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative px-4 md:px-8 lg:px-16 pt-32 md:pt-40 xl:pt-60 pb-32 backdrop-blur-sm rounded-2xl shadow-xl overflow-hidden"
+      className="relative px-4 md:px-8 lg:px-16 pt-32 md:pt-40 xl:pt-60 pb-32 backdrop-blur-sm  shadow-xl overflow-hidden"
     >
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-5">
         <div className="flex flex-col justify-between items-center md:items-start gap-10 md:gap-0">

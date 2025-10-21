@@ -2,11 +2,11 @@ export default function Marquee() {
   const textArray = Array(20).fill(`free for work,"available"`);
 
   return (
-    <section className=" w-full overflow-hidden border-b border-brand/10">
+    <section className=" w-full overflow-hidden border-b border-brand/10 pt-5">
       <div className="marquee-wrapper relative w-full overflow-hidden">
         <div className="marquee flex animate-marquee">
           {[...textArray, ...textArray].map((text, index) => (
-            <div key={index} className="flex-shrink-0 mr-16">
+            <div key={index} className=" mr-16">
               <span className="text-[50px] md:text-[70px] lg:text-[6rem]  font-semibold text-brandColor font-spacema text-shadow text-shadow-light whitespace-nowrap">
                 {text}
               </span>
