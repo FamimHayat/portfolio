@@ -27,13 +27,18 @@ const Banner = () => {
 
   return (
     <section
-      className="relative px-2 h-dvh bg-cover bg-center overflow-hidden z-10 sm:bg-fixed"
-      style={{ backgroundImage: "url('/banner.png')" }}
+      className="relative px-2 h-dvh overflow-hidden z-10"
+      style={{ backgroundImage: "none" }}
     >
-      <div className="absolute inset-0 from-dark/70 via-dark/20 to-transparent pointer-events-none"></div>
+      {/* Background image and overlays only on md and above */}
+      <div className="hidden md:block absolute inset-0 from-dark/70 via-dark/20 to-transparent pointer-events-none"></div>
+      <div className="hidden md:block absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none"></div>
+      <div
+        className="hidden md:block absolute inset-0 bg-cover bg-center sm:bg-fixed"
+        style={{ backgroundImage: "url('/banner.png')" }}
+      ></div>
 
-      <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none"></div>
-
+      {/* Top Controls */}
       <div className="z-50 container flex items-center justify-between px-2 pt-25 font-righteous relative">
         <Link
           href="/resume"
@@ -44,10 +49,12 @@ const Banner = () => {
         <LiveDate />
       </div>
 
+      {/* Subtitle */}
       <p className="hidden sm:block text-xl sm:text-2xl text-center pb-2 text-white/70 animate-pulse">
         crafting clean interfaces
       </p>
 
+      {/* Main Banner Text */}
       <div className="relative h-full flex flex-col items-center justify-center text-center border-t-2 sm:border-t-2 border-brand/50 rounded-full">
         <h1 className="hidden sm:block text-[clamp(2rem,25vw,27rem)] text-brand font-spacema font-bold uppercase [text-shadow:0_0_10px_rgba(245,239,230,0.6),0_0_20px_rgba(245,239,230,0.5),0_0_40px_rgba(245,239,230,0.4)]">
           <LettersPullUp text={desktopTexts[desktopIndex]} />
