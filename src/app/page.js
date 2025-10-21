@@ -1,6 +1,6 @@
 import React from "react";
 import Banner from "./components/home/Banner";
-import AboutMe from "./components/home/AboutMe";
+
 import Marquee from "./components/common-components/Marquee";
 import Skills from "./components/home/Skills";
 import Parallax from "./components/home/Parallax";
@@ -11,7 +11,7 @@ const Page = () => {
   return (
     <>
       <Banner />
-      <AboutMe />
+
       <Marquee />
       <Skills />
       <Parallax />
