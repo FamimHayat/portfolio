@@ -1,15 +1,39 @@
 @import "tailwindcss";
+@import "aos/dist/aos.css";
+
+@utility container {
+  margin: 0 auto;
+}
 
 :root {
   --background: #ffffff;
   --foreground: #171717;
 }
 
-@theme inline {
-  --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
+@theme {
+  --color-brand: #f5efe6;
+  --color-dark: #141414;
+  --color-light: #f7f4ea;
+  --font-righteous: "Noto Sans", sans-serif;
+  --font-spacema: "Spacema", sans-serif;
+}
+
+@font-face {
+  font-family: "Spacema";
+  src: url("/fonts/Spacema-Regular.ttf") format("truetype");
+  font-weight: 400;
+  font-style: normal;
+}
+
+@font-face {
+  font-family: "Spacema";
+  src: url("/fonts/Spacema-Bold.ttf") format("truetype");
+  font-weight: 600;
+  font-style: normal;
+}
+
+.font-spacema {
+  font-family: var(--font-spacema);
 }
 
 @media (prefers-color-scheme: dark) {
@@ -20,7 +44,103 @@
 }
 
 body {
-  background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  background: #0a0a0a;
+}
+
+.custom {
+  color: #141414;
+}
+
+.brandButtonEffect {
+  position: relative;
+  z-index: 0;
+  overflow: hidden;
+}
+
+.brandButtonEffect::after {
+  content: "";
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0%;
+  height: 10%;
+  background-color: #ffffff;
+  border-radius: 50%;
+  transition: all linear 0.15s;
+  z-index: 10;
+}
+
+.brandButtonEffect:hover::after {
+  left: 0;
+  width: 100%;
+  border-radius: 0%;
+}
+
+.parallax {
+  background-image: url("/parallax.jpg");
+  background-attachment: fixed;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+@layer utilities {
+  .text-shadow-deep {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 2px 2px 4px rgba(0, 0, 0, 0.25),
+      4px 4px 8px rgba(0, 0, 0, 0.2), 6px 6px 12px rgba(0, 0, 0, 0.15);
+  }
+
+  .text-shadow-light {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.25), 2px 2px 4px rgba(0, 0, 0, 0.2),
+      4px 4px 8px rgba(0, 0, 0, 0.15);
+  }
+
+  .text-shadow-lighter {
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.15),
+      2px 2px 4px rgba(0, 0, 0, 0.12), 4px 4px 8px rgba(0, 0, 0, 0.08);
+  }
+}
+
+@keyframes fadeIn {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 3s infinite;
+}
+
+.text-shadow {
+  -webkit-text-stroke: 01px #ffffff4d;
+  color: #0a0a0a;
+}
+
+@layer utilities {
+  .text-glow {
+    text-shadow: 0 0 10px rgba(245, 239, 230, 0.6),
+      0 0 20px rgba(245, 239, 230, 0.5), 0 0 40px rgba(245, 239, 230, 0.4);
+  }
+}
+
+@layer utilities {
+  @keyframes fade-in-out {
+    0%,
+    100% {
+      opacity: 0;
+    }
+    50% {
+      opacity: 1;
+    }
+  }
+
+  .fade-glow {
+    animation: fade-in-out 3s ease-in-out infinite; /* duration = 3s, infinite loop */
+  }
 }
