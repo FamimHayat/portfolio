@@ -30,7 +30,7 @@ const LiveDate = () => {
   }, []);
 
   return (
-    <div className="nav-li-css text-[20px] px-3 py-2 h-fit bg-[#00000040] cursor-pointer rounded-4xl border-2 text-glow border-brand duration-150 text-white/90 font-headerFont md:text-[22px] lg:text-[26px]">
+    <div className="nav-li-css text-[20px] px-3 py-2 h-fit bg-[#00000040] overflow-hidden cursor-pointer rounded-4xl border-2 text-glow border-brand duration-150 text-white/90 font-headerFont md:text-[22px] lg:text-[26px]">
       <h3 className="text-xl">
         <span>{currentDay}</span> ,
         {/* Show month number on xs, full name on sm+ */}
