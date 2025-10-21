@@ -15,59 +15,50 @@ const Banner = () => {
     "web-dev",
     "ui/ux",
   ];
-
   const [desktopIndex, setDesktopIndex] = useState(0);
 
   useEffect(() => {
     const text = desktopTexts[desktopIndex];
     const timer = setTimeout(() => {
       setDesktopIndex((prev) => (prev + 1) % desktopTexts.length);
-    }, text.length * 80 + 300 + 1000);
+    }, text.length * 80 + 1300);
     return () => clearTimeout(timer);
   }, [desktopIndex]);
 
   return (
     <section
-      className="relative px-2 h-dvh bg-cover bg-no-repeat bg-center overflow-hidden z-10 sm:bg-fixed"
+      className="relative px-2 h-dvh bg-cover bg-center overflow-hidden z-10 sm:bg-fixed"
       style={{ backgroundImage: "url('/banner.png')" }}
     >
-      {/* Overlay Layer */}
-      <div className="absolute inset-0 bg-gradient-to-t from-dark/70 via-dark/20 to-transparent will-change-transform">
-        <div className="absolute inset-0 mx-5 sm:border-t-2 sm:rounded-t-full sm:border-brand/50"></div>
-      </div>
+      <div className="absolute inset-0 from-dark/70 via-dark/20 to-transparent pointer-events-none"></div>
 
-      {/* Header Row */}
+      <div className="absolute bottom-0 left-0 w-full h-1/3 bg-gradient-to-t from-black/80 via-black/40 to-transparent pointer-events-none"></div>
+
       <div className="z-50 container flex items-center justify-between px-2 pt-25 font-righteous relative">
-        <div>
-          <Link
-            href="/resume"
-            className="px-5 py-2 border-2 bg-[#00000040] border-brand rounded-4xl text-xl text-lightBrand cursor-pointer font-headerFont text-light text-glow relative z-20"
-          >
-            resume
-          </Link>
-        </div>
+        <Link
+          href="/resume"
+          className="px-5 py-2 border-2 bg-[#00000040] border-brand rounded-4xl text-xl text-white cursor-pointer text-glow"
+        >
+          resume
+        </Link>
         <LiveDate />
       </div>
 
-      {/* Subtitle */}
-      <p className="hidden sm:block text-xl sm:text-2xl text-center pb-2 font-headerFont text-white/70 animate-pulse">
+      <p className="hidden sm:block text-xl sm:text-2xl text-center pb-2 text-white/70 animate-pulse">
         crafting clean interfaces
       </p>
 
-      {/* Main Heading */}
       <div className="relative h-full flex flex-col items-center justify-center text-center border-t-2 sm:border-t-2 border-brand/50 rounded-full">
-        <h1 className="hidden sm:block text-[clamp(2rem,25vw,27rem)] text-brand font-spacema font-bold uppercase relative [text-shadow:0_0_10px_rgba(245,239,230,0.6),0_0_20px_rgba(245,239,230,0.5),0_0_40px_rgba(245,239,230,0.4)] will-change-transform">
+        <h1 className="hidden sm:block text-[clamp(2rem,25vw,27rem)] text-brand font-spacema font-bold uppercase [text-shadow:0_0_10px_rgba(245,239,230,0.6),0_0_20px_rgba(245,239,230,0.5),0_0_40px_rgba(245,239,230,0.4)]">
           <LettersPullUp text={desktopTexts[desktopIndex]} />
         </h1>
 
-        <div className="block sm:hidden absolute inset-0 mt-45 border-t-2 rounded-t-4xl border-brand/50"></div>
-
-        <h1 className="sm:hidden text-[clamp(2rem,25vw,10rem)] text-brand font-spacema font-bold uppercase relative text-glow z-10 will-change-transform">
+        <h1 className="sm:hidden text-[clamp(2rem,25vw,10rem)] text-brand font-spacema font-bold uppercase text-glow z-10">
           portfolio
         </h1>
 
         <div className="text-center pb-2 relative z-10 mt-20">
-          <p className="text-xl font-headerFont text-white/70 animate-pulse">
+          <p className="text-xl text-white/70 animate-pulse">
             crafting clean interfaces
           </p>
         </div>
