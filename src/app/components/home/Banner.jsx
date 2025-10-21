@@ -1,9 +1,8 @@
 "use client";
 
-import React, { useState, useEffect } from "react";
+import React, { useState, useEffect, useMemo } from "react";
+import { motion } from "framer-motion";
 import Link from "next/link";
-
-import { LettersPullUp } from "./banner-components/LettersPullUp";
 import LiveDate from "../common-components/LiveDate";
 
 const Banner = () => {
@@ -24,6 +23,29 @@ const Banner = () => {
     return () => clearTimeout(timer);
   }, [desktopIndex]);
 
+  const text = desktopTexts[desktopIndex];
+
+  const letters = useMemo(() => text.split(""), [text]);
+
+  const container = {
+    hidden: { opacity: 0, y: 20 },
+    show: {
+      opacity: 1,
+      y: 0,
+      transition: {
+        staggerChildren: 0.03,
+        duration: 0.3,
+        ease: "easeOut",
+      },
+    },
+    exit: { opacity: 0, y: -20, transition: { duration: 0.3 } },
+  };
+
+  const child = {
+    hidden: { y: 15, opacity: 0, willChange: "transform, opacity" },
+    show: { y: 0, opacity: 1, transition: { duration: 0.25, ease: "easeOut" } },
+  };
+
   return (
     <section className="relative px-2 h-dvh overflow-hidden z-10">
       <div className="container flex items-center justify-between px-2 pt-25 font-righteous relative">
@@ -41,11 +63,26 @@ const Banner = () => {
       </p>
 
       <div className="relative h-full flex flex-col items-center justify-center text-center border-t-2 border-brand/50 rounded-full">
-        <h1 className="hidden sm:block text-[clamp(2rem,25vw,27rem)] text-brand font-spacema font-bold uppercase">
-          <LettersPullUp text={desktopTexts[desktopIndex]} />
-        </h1>
+        <motion.div
+          key={text}
+          className="hidden md:flex justify-center"
+          variants={container}
+          initial="hidden"
+          animate="show"
+          exit="exit"
+        >
+          {letters.map((char, i) => (
+            <motion.span
+              key={i}
+              variants={child}
+              className="[text-shadow:0_0_10px_rgba(245,239,230,0.6),0_0_20px_rgba(245,239,230,0.5),0_0_40px_rgba(245,239,230,0.4)] text-[clamp(2rem,25vw,27rem)] text-brand font-spacema font-bold uppercase"
+            >
+              {char === " " ? "\u00A0" : char}
+            </motion.span>
+          ))}
+        </motion.div>
 
-        <h1 className="sm:hidden text-[clamp(2rem,25vw,10rem)] text-brand font-spacema font-bold uppercase   text-glow">
+        <h1 className="sm:hidden text-[clamp(2rem,25vw,10rem)] text-brand font-spacema font-bold uppercase text-glow">
           portfolio
         </h1>
 

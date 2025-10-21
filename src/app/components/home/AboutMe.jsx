@@ -1,7 +1,7 @@
 "use client";
 import React, { useRef } from "react";
-
 import SocialBar from "../common-components/SocialBar";
+import Image from "next/image";
 
 const AboutMe = () => {
   const sectionRef = useRef(null);
@@ -9,13 +9,14 @@ const AboutMe = () => {
   return (
     <section
       ref={sectionRef}
-      className="relative px-4 md:px-8 lg:px-16 pt-32 md:pt-40 xl:pt-60 pb-32 backdrop-blur-sm  shadow-xl overflow-hidden"
+      className="relative px-4 md:px-8 lg:px-16 pt-32 md:pt-40 xl:pt-60 pb-32 backdrop-blur-sm shadow-xl overflow-hidden"
     >
       <div className="container mx-auto grid grid-cols-1 lg:grid-cols-2 gap-5">
         <div className="flex flex-col justify-between items-center md:items-start gap-10 md:gap-0">
           <h4 className="text-[calc(50px+10vw)] text-brand font-spacema font-semibold tracking-tighter text-glow text-center md:text-left">
             about me
           </h4>
+
           <div className="flex flex-col gap-6">
             <p className="text-lg md:text-xl lg:text-2xl text-brand font-righteous text-center md:text-left">
               <span className="ml-30">I am</span> a developer and UX/UI designer
@@ -31,7 +32,17 @@ const AboutMe = () => {
             </div>
           </div>
         </div>
-        <div className="flex gap-5"></div>
+
+        <div className="flex items-center justify-center">
+          <Image
+            src="/about-me.jpg"
+            alt="About Me"
+            width={500}
+            height={700}
+            className="rounded-2xl object-cover "
+            priority
+          />
+        </div>
       </div>
     </section>
   );

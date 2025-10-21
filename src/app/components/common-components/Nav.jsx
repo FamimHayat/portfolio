@@ -20,31 +20,27 @@ const Nav = () => {
       }`}
     >
       <div className="flex justify-between items-center gap-5">
-        {/* Logo */}
         <Link href="/">
           <h2
             data-aos="fade-right"
-            className="sm:px-1 lg:px-3 py-1.5 text-lg sm:text-2xl text-white tracking-tighter font-semibold font-righteous  [text-shadow:0_0_10px_rgba(245,239,230,0.6),0_0_20px_rgba(245,239,230,0.5),0_0_40px_rgba(245,239,230,0.4)]"
+            className="sm:px-1 lg:px-3 py-1.5 text-lg sm:text-2xl text-white text-shadow-lighter tracking-tight  font-righteous  [text-shadow:0_0_10px_rgba(245,239,230,0.6),0_0_20px_rgba(245,239,230,0.5),0_0_40px_rgba(245,239,230,0.4)]"
           >
             famim hayat
           </h2>
         </Link>
 
-        {/* Menu */}
         <ul className="flex gap-2 sm:gap-4 lg:gap-6 items-center">
-          {/* Home */}
           <li data-aos="fade-up">
             <Link
               href="/"
-              className="text-white text-md sm:text-lg lg:text-xl font-righteous brandButtonEffect"
+              className="text-white text-md sm:text-lg lg:text-xl font-righteous brandButtonEffect text-shadow-lighter"
             >
               home
             </Link>
           </li>
 
-          {/* Sites Dropdown */}
           <li data-aos="fade-right" className="relative group">
-            <button className="text-white text-md sm:text-lg lg:text-xl font-righteous brandButtonEffect ">
+            <button className="text-white text-md sm:text-lg lg:text-xl font-righteous brandButtonEffect text-shadow-lighter">
               sites
             </button>
             <div className="absolute top-full -left-4 w-fit bg-black/90 backdrop-blur-md p-4 mt-2 rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999]">
@@ -93,9 +89,8 @@ const Nav = () => {
             </div>
           </li>
 
-          {/* Pages Dropdown */}
           <li data-aos="fade-left" className="relative group">
-            <button className="text-white text-md sm:text-lg lg:text-xl font-righteous brandButtonEffect">
+            <button className="text-white text-md sm:text-lg lg:text-xl font-righteous brandButtonEffect text-shadow-lighter">
               pages
             </button>
             <div className="absolute top-full -left-4 w-40 bg-black/90 backdrop-blur-md p-4 mt-2 rounded-xl opacity-0 invisible group-hover:opacity-100 group-hover:visible transition-all duration-300 z-[9999]">
