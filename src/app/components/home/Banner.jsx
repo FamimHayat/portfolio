@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, useEffect, useMemo } from "react";
-import { motion } from "framer-motion";
+import { motion, useScroll, useTransform } from "framer-motion";
 import Link from "next/link";
 import LiveDate from "../common-components/LiveDate";
 
@@ -24,7 +24,6 @@ const Banner = () => {
   }, [desktopIndex]);
 
   const text = desktopTexts[desktopIndex];
-
   const letters = useMemo(() => text.split(""), [text]);
 
   const container = {
@@ -32,11 +31,7 @@ const Banner = () => {
     show: {
       opacity: 1,
       y: 0,
-      transition: {
-        staggerChildren: 0.03,
-        duration: 0.3,
-        ease: "easeOut",
-      },
+      transition: { staggerChildren: 0.03, duration: 0.3, ease: "easeOut" },
     },
     exit: { opacity: 0, y: -20, transition: { duration: 0.3 } },
   };
@@ -46,9 +41,25 @@ const Banner = () => {
     show: { y: 0, opacity: 1, transition: { duration: 0.25, ease: "easeOut" } },
   };
 
+  const { scrollY } = useScroll();
+  const y = useTransform(scrollY, [0, 500], ["0%", "20%"]);
+
   return (
-    <section className="relative px-2 h-dvh overflow-hidden z-10">
-      <div className="container flex items-center justify-between px-2 pt-25 font-righteous relative">
+    <section className="relative h-dvh overflow-hidden z-10">
+      {/* Parallax Background */}
+      <motion.div
+        style={{
+          backgroundImage: "url('/banner.png')",
+          backgroundSize: "cover",
+          backgroundPosition: "center",
+          y,
+        }}
+        className="absolute inset-0 will-change-transform"
+      />
+      <div className="absolute inset-0 bg-gradient-to-t from-dark/80 via-dark/30 to-transparent" />
+
+      {/* Top Nav Section */}
+      <div className="relative z-20 container flex items-center justify-between px-2 pt-25 font-righteous">
         <Link
           href="/resume"
           className="px-5 py-2 border-2 border-brand rounded-4xl text-xl text-white cursor-pointer"
@@ -58,11 +69,13 @@ const Banner = () => {
         <LiveDate />
       </div>
 
-      <p className="hidden sm:block text-xl sm:text-2xl text-center pb-5 text-white/70">
+      {/* Subtext */}
+      <p className="hidden sm:block text-xl sm:text-2xl text-center pb-5 text-white/70 relative z-20">
         crafting clean interfaces
       </p>
 
-      <div className="relative h-full flex flex-col items-center justify-center text-center border-t-2 border-brand/50 rounded-full">
+      {/* Animated Title */}
+      <div className="relative z-20 h-full flex flex-col items-center justify-center text-center border-t-2 border-brand/50 rounded-full">
         <motion.div
           key={text}
           className="hidden md:flex justify-center"
@@ -82,6 +95,7 @@ const Banner = () => {
           ))}
         </motion.div>
 
+        {/* Mobile Static Title */}
         <h1 className="sm:hidden text-[clamp(2rem,25vw,10rem)] text-brand font-spacema font-bold uppercase text-glow">
           portfolio
         </h1>
@@ -89,8 +103,6 @@ const Banner = () => {
         <div className="text-center pb-2 mt-20">
           <p className="text-xl text-white/70">crafting clean interfaces</p>
         </div>
-
-        <div className="absolute inset-0 mt-5 border-t-2 rounded-t-full border-brand/50"></div>
       </div>
     </section>
   );
